@@ -24,16 +24,26 @@ body {
 }
 .navbar {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 .navbar-left img {
-  width: 35%;
+  width: 70%;
 }
-
+.navbar-center {
+  grid-column: 2/5;
+  text-align: center;
+}
+.navbar-center a, .navbar-center button{
+  margin: 0 1rem ;
+}
 .navbar-right {
   text-align: end;
-}
 
+}
+.navbar-right a{
+  position: relative;
+  bottom: 0.5rem;
+}
 .dropdown-btn {
   background-color: white;
   border: none;
@@ -69,6 +79,8 @@ body {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  top: 2.2rem;
+  left: 1rem;
 }
 .dropdown-content a {
   color: #fcfcfc;
@@ -201,7 +213,7 @@ border-radius: .5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
-  margin: 13% 5%;
+  margin: 13% 5% 0 5%;
   column-gap: 3%;
   border: 1px solid rgb(206, 199, 199);
   row-gap: 2rem;
@@ -229,5 +241,94 @@ border-radius: .5rem;
 }
 .footer{
   background-color: #313131;
-  color: #bababa
+  color: rgb(244, 243, 243);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 1rem 2rem;
+}
+.footer h1{
+  font-size: 1.2rem;
+  padding-bottom: 0.8rem;
+  text-decoration: underline;
+}
+.footer h3{
+  font-size: 1rem;
+}
+.footer p{
+  font-size: .8rem;
+}
+.menu a{
+  text-decoration: none;
+  color: rgb(244, 243, 243);
+}
+.menu-items, .socials div{
+  padding-bottom: .5rem;
+}
+.location{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: .5rem;
+
+}
+.location-item{
+  row-gap: 20rem;
+}
+.location h1{
+  grid-column: 1/3;
+}
+.menu-items{
+  font-size: 1rem;  
+}
+@media screen and (max-width: 450px){
+ 
+  .banner{
+    font-size: 0.6rem;
+    height: 1rem;
+  }
+  
+  .navbar-left{
+    grid-column: 1/4;
+    text-align: center;
+  }
+  .navbar-left img{
+    width:70%;
+  }
+  .navbar-center{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column: 1/3;
+    width: 100%;
+   background-color: black;
+    height: 2.25em;
+ 
+  } 
+  .navbar-right{
+    width: .1rem;
+    padding-left: 2.8rem;
+    height: 2.25em;
+    
+  }
+  .navbar-right a{
+    padding: .4em;
+  }
+  .navbar-center a, .navbar-center button, .navbar-right a{
+    font-size: 1rem;
+    position: relative;
+    bottom: 1rem;   
+   
+  }
+  .navbar-center a, .navbar-center button{
+   
+   width: 75px;
+
+  }
+  .home-image{
+    height: 8rem;
+  }
+  .home-image img{
+
+  }
+  .header{
+
+  }
 }
